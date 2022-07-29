@@ -1,0 +1,7 @@
+{
+  "name": "ApiRest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
