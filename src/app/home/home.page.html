@@ -14,12 +14,13 @@
   </ion-header>
 
 
-  <ion-card *ngFor="let data of Dat" color="danger"  onclick="share()">
+  <ion-card *ngFor="let data of DatDownload" color="danger"  onclick="share()">
     <ion-card-header>
       <h1 >Results</h1>
     </ion-card-header>
+    <ion-card-content  >
 
-    <ion-card-content >
+      <ion-img style="width: 80px; height: 80px;" [src]="data.avatar"></ion-img>
       <h1>Id: {{data.id}}</h1>
       <h1>Email: {{data.email}}</h1>
       <h1>Nombre:{{data.first_name}}</h1>

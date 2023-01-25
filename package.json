@@ -1,7 +1,7 @@
 {
   "name": "ApiRest",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "mercwaretecnology",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -27,18 +27,20 @@
     "@capacitor/haptics": "4.0.1",
     "@capacitor/keyboard": "4.0.1",
     "@capacitor/status-bar": "4.0.1",
+    "@ionic-native/social-sharing": "^5.36.0",
     "@ionic/angular": "^6.1.9",
     "add": "^2.0.6",
     "axios": "^0.27.2",
-    "cordova": "^5.4.1",
-    "cordova-plugin-advanced-http": "^3.3.1",
+    "cordova": "^5.3.3",
+    "cordova-admob": "^5.1.0",
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-x-socialsharing": "^6.0.4",
     "file": "^0.2.2",
-    "plugin": "^0.3.3",
+    "plugin": "^0.0.15",
     "rxjs": "~6.6.0",
+    "three": "^0.145.0",
     "tslib": "^2.2.0",
-    "update": "^0.7.4",
+    "update": "^0.4.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

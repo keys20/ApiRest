@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'data-send',
+    loadChildren: () => import('./pages/data-send/data-send.module').then( m => m.DataSendPageModule)
+  },
 ];
 
 @NgModule({

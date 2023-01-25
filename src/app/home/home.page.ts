@@ -1,13 +1,14 @@
+
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable id-blacklist */
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable @typescript-eslint/prefer-for-of */
 /* eslint-disable @typescript-eslint/naming-convention */
-import { HTTP } from '@awesome-cordova-plugins/http/ngx';
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
-import { __values } from 'tslib';
+import { CallApiServiceService } from '../services/call-api-service.service';
+
 // type Lottery = {
 //   name: string;
 //   date: string;
@@ -17,14 +18,15 @@ import { __values } from 'tslib';
 // type GetLotteryResponse = {
 //   data: Lottery[];
 // };
-type User = {
-  id: number;
-  email: string;
-  first_name: string;
-};
-type GetLotteryResponse = {
-  data: User[];
-};
+// type loterias = {
+//   logo: string;
+//   name: string;
+//   country: string;
+//   result: string;
+// };
+// type GetLotteryResponse = {
+//   data: loterias[];
+// };
 
 @Component({
   selector: 'app-home',
@@ -32,50 +34,63 @@ type GetLotteryResponse = {
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-   public Dat= [];
-    url = 'http';
-    text = 'paramete'+'\n';
+
+  public DatDownload = [];
+  url = 'http';
+  text = 'paramete' + '\n';
+
+  constructor(private socialSharing: SocialSharing,private callApiServiceService: CallApiServiceService,
+   ) {}
+   ngOnInit() {
+    this.callApiServiceService.consulta();
+
+  this.DatDownload = this.callApiServiceService.DatDownload;
+  console.log(''+this.DatDownload.toString());
+    //localStorage.removeItem('DATALOCAL');
 
 
-  constructor( private socialSharing: SocialSharing) {}
-  ngOnInit() {
-    this.consulta();
   }
 
-  async consulta() {
+/*  async consulta() {
     try {
+      //'https://reqres.in/api/users'
       // 👇️ const data: GetUsersResponse
       const { data, status } = await axios.get<GetLotteryResponse>(
-        'https://reqres.in/api/users',
+        'https://visitrd.000webhostapp.com/users.json',
         {
+
           headers: {
             Accept: 'application/json',
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+            // 'Access-Control-Allow-Origin':'*',
           },
+
+
         }
       );
-      // // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
-      // data.data.forEach((function callback(Value) => {
-
-      //     this.Datos= localStorage.setItem('datos',);
-      //          // this.first_name Value.first_name;
-      //     // this.email = Value.email;
-      //     localStorage.getItem('datos');
-      //     console.log('Valores:', this.Datos);
+      */
+      /*
+      data.data.forEach((values, index, arreglo) => {
+      console.log(data.data);
 
 
-      // });
+
+      });
+      */
+      // 👇️ "response status is: 200"
 
 
+/*
       data.data.forEach((values, index, arreglo) => {
         //this.Dat= [];
-        //this.Dat.push(numero.email);
-        this.Dat.push(values);
-        console.log(this.Dat);
+        this.DatDownload.push(values);
+        console.log('MAS', this.DatDownload);
 
-
-    });
-
-      // 👇️ "response status is: 200"
+        localStorage.setItem('DATALOCAL', JSON.stringify(this.DatDownload));
+        console.log('FFFA', this.DatDownload);
+        // console.log('DATOS',data.data);
+        console.log('LOCAL', localStorage.getItem('DATALOCAL'));
+      });
       console.log('response status is: ', status);
       return data;
     } catch (error) {
@@ -88,11 +103,16 @@ export class HomePage implements OnInit {
       }
     }
   }
-  share(){
-
-    this.socialSharing.shareViaWhatsApp(this.text,null,this.url);
-   }
-
+  share() {
+    // Check if sharing via email is supported
+    this.socialSharing
+      .canShareViaEmail()
+      .then(() => {
+        // Sharing via email is possible
+      })
+      .catch(() => {
+        // Sharing via email is not possible
+      });
   }
-
-
+  */
+}
