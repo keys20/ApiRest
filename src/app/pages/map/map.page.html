@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="capacitor-google-map" >
+
+    <capacitor-google-map id="map" #map> </capacitor-google-map>
+
+  <!-- <ion-fab-button id="open-modal" [routerLink]="['/zoneinfo']" color="danger">
+  </ion-fab-button> -->
+  <!-- llamando al componente info -->
+  <!--  <app-zoneinfo> </app-zoneinfo>
+  <ion-router-outlet id="main2"></ion-router-outlet> -->
+
+  <div *ngFor="let locations of DatDownload " class="container">
+    <ion-card >
+      <ion-card-content>
+        <h1>{{'Ciudad:\n'+locations.city}}</h1>
+        <img src="{{locations.img}}" alt="">
+        <h1>{{'Descripcion:\n'+locations.desc}}</h1>
+        <a href="{{https://www.google.com/maps/@locations.lat+locations.lng }}">Ir a</a>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+
+</ion-content>
+

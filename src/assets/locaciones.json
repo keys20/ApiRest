@@ -1,0 +1,25 @@
+[
+  {
+    "lat": 40.416875,
+    "lng": -3.703308,
+    "city": "Madrid-Puerta del Sol",
+    "desc": "Puerta del Sol",
+    "img":"https://i0.wp.com/elplanetaurbano.com/wp-content/uploads/2022/07/madrid-epu.jpg?resize=1250%2C781&ssl=1"
+
+  },
+  {
+    "lat": 40.417438,
+    "lng": -3.693363,
+    "city": "Madrid-Paseo del Prado",
+    "desc": "Paseo del Prado",
+    "img":"https://i0.wp.com/elplanetaurbano.com/wp-content/uploads/2022/07/madrid-epu.jpg?resize=1250%2C781&ssl=1"
+  },
+  {
+    "lat": 40.407015,
+    "lng": -3.691163,
+    "city": "Madrid-Estación de Atocha",
+    "desc": "Estación de Atocha",
+    "img":"https://viajamosjuntos.com.ar/wp-content/uploads/2020/08/Lugares-en-Madrid-Espa%C3%B1a-1600x1067.jpg"
+
+  }
+]

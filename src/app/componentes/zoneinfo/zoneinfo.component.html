@@ -1,0 +1,29 @@
+<ion-content  content-Id="main2">
+  <ion-modal
+    trigger="open-modal"
+    (willDismiss)="canCelar()"
+    initial-breakpoint="0.8"
+  >
+    <!-- Button trigger modal -->
+    <div class="container">
+
+    </div>
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>Informacion de la zona</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding" class="ion-justify-content-center">
+       <div>
+        <ion-card>
+         <!--  <h1>Lugar:{{zona.name}}</h1>
+          <img src={{zona.img}} alt="imagenes">
+          <p>Descripcion:{{zona.desc}}</p> -->
+        </ion-card>
+       </div>
+    </ion-content>
+  </ion-modal>
+</ion-content>
+
+<ion-router-outlet id="main2"></ion-router-outlet>

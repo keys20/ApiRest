@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+/* eslint-disable max-len */
+
+>>>>>>> Stashed changes
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable id-blacklist */
 /* eslint-disable @typescript-eslint/no-shadow */
@@ -7,7 +12,13 @@ import { HTTP } from '@awesome-cordova-plugins/http/ngx';
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
+<<<<<<< Updated upstream
 import { __values } from 'tslib';
+=======
+import { CallApiServiceService } from '../services/call-api-service.service';
+import { LoadingController } from '@ionic/angular';
+
+>>>>>>> Stashed changes
 // type Lottery = {
 //   name: string;
 //   date: string;
@@ -32,17 +43,48 @@ type GetLotteryResponse = {
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+<<<<<<< Updated upstream
    public Dat= [];
     url = 'http';
     text = 'paramete'+'\n';
+=======
+  public DatDownload = [];
+  url = 'http';
+  text = 'paramete' + '\n';
 
+  constructor(
+    private socialSharing: SocialSharing,
+    private callApiServiceService: CallApiServiceService
+  ) {}
+  ngOnInit() {
+    this.callApiServiceService.consulta();
+    //this.callApiServiceService.autoLoader();
+    this.DatDownload = this.callApiServiceService.DatDownload;
+    console.log('hhh' + this.DatDownload.toString());
+    //localStorage.removeItem('DATALOCAL');
+  }
+>>>>>>> Stashed changes
 
+  // // async showLoading() {
+  // //   const loading = await this.loadingCtrl.create({
+  // //     message: 'Loading...',
+  // //     duration: this.DatDownload.length,
+  // //     spinner: 'circles',
+  // //   });
+
+<<<<<<< Updated upstream
   constructor( private socialSharing: SocialSharing) {}
   ngOnInit() {
     this.consulta();
   }
 
   async consulta() {
+=======
+  // //   loading.present();
+  // // }
+
+  /*  async consulta() {
+>>>>>>> Stashed changes
     try {
       // 👇️ const data: GetUsersResponse
       const { data, status } = await axios.get<GetLotteryResponse>(
@@ -53,8 +95,15 @@ export class HomePage implements OnInit {
           },
         }
       );
+<<<<<<< Updated upstream
       // // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
       // data.data.forEach((function callback(Value) => {
+=======
+      */
+  /*
+      data.data.forEach((values, index, arreglo) => {
+      console.log(data.data);
+>>>>>>> Stashed changes
 
       //     this.Datos= localStorage.setItem('datos',);
       //          // this.first_name Value.first_name;
@@ -63,9 +112,17 @@ export class HomePage implements OnInit {
       //     console.log('Valores:', this.Datos);
 
 
+<<<<<<< Updated upstream
       // });
 
 
+=======
+      });
+      */
+  // 👇️ "response status is: 200"
+
+  /*
+>>>>>>> Stashed changes
       data.data.forEach((values, index, arreglo) => {
         //this.Dat= [];
         //this.Dat.push(numero.email);

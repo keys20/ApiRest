@@ -8,9 +8,24 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'map',
     pathMatch: 'full'
   },
+<<<<<<< Updated upstream
+=======
+  {
+    path: 'data-send',
+    loadChildren: () => import('./pages/data-send/data-send.module').then( m => m.DataSendPageModule)
+  },
+  {
+    path: 'scrapy',
+    loadChildren: () => import('./scrapy/scrapy/scrapy.module').then( m => m.ScrapyPageModule)
+  },
+  {
+    path: 'map',
+    loadChildren: () => import('./pages/map/map.module').then( m => m.MapPageModule)
+  },
+>>>>>>> Stashed changes
 ];
 
 @NgModule({
