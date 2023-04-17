@@ -13,23 +13,22 @@
     </ion-toolbar>
   </ion-header>
 
-<<<<<<< Updated upstream
 
   <ion-card *ngFor="let data of Dat" color="danger"  onclick="share()">
-=======
+
   <center>
   <ion-card  class="User_Label_Section" *ngFor="let data of DatDownload" color="danger"  onclick="share()">
->>>>>>> Stashed changes
+
     <ion-card-header>
     <h1>{{data.name}}</h1>
     </ion-card-header>
-<<<<<<< Updated upstream
+
 
     <ion-card-content >
       <h1>Id: {{data.id}}</h1>
       <h1>Email: {{data.email}}</h1>
       <h1>Nombre:{{data.first_name}}</h1>
-=======
+
     <ion-card-content  >
       <ion-img style="width: 100px; height: 100px;" [src]="data"></ion-img>
       <span></span>
@@ -37,7 +36,7 @@
       <span></span>
       <h1>{{data.result}}</h1>
       <span></span>
->>>>>>> Stashed changes
+
     </ion-card-content>
     <ion-icon name="share" ></ion-icon>
   </ion-card>

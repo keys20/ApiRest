@@ -32,20 +32,20 @@
     "add": "^2.0.6",
     "assert": "^2.0.0",
     "axios": "^0.27.2",
-<<<<<<< Updated upstream
+
     "cordova": "^5.4.1",
     "cordova-plugin-advanced-http": "^3.3.1",
-=======
+
     "cordova": "^5.3.3",
->>>>>>> Stashed changes
+
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-x-socialsharing": "^6.0.4",
     "crypto-browserify": "^3.12.0",
     "file": "^0.2.2",
-<<<<<<< Updated upstream
+
     "plugin": "^0.3.3",
     "rxjs": "~6.6.0",
-=======
+
     "http": "^0.0.1-security",
     "https-browserify": "^1.0.0",
     "install": "^0.13.0",
@@ -59,7 +59,7 @@
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "three": "^0.145.0",
->>>>>>> Stashed changes
+
     "tslib": "^2.2.0",
     "update": "^0.7.4",
     "zone.js": "~0.11.4"
