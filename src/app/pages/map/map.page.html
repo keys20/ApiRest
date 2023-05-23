@@ -14,7 +14,7 @@
   <!--  <app-zoneinfo> </app-zoneinfo>
   <ion-router-outlet id="main2"></ion-router-outlet> -->
 
-  <div *ngFor="let locations of DatDownload " class="container">
+  <!-- <div  class="container">
     <ion-card >
       <ion-card-content>
         <h1>{{'Ciudad:\n'+locations.city}}</h1>
@@ -24,8 +24,28 @@
       </ion-card-content>
     </ion-card>
   </div>
-
+ -->
 
 
 </ion-content>
 
+
+<ion-content class="container">
+  <!-- <hr class="hrimag"> -->
+<div>
+  <ion-col size="10" class="slider">
+    <div>
+      <ion-card class="slideCard">
+        <ion-slides pager="true">
+          <ion-slide *ngFor="let locations of DatDownload ">
+            <ion-card>
+              <ion-img style="width: 100px; height: 100px;" src="{{locations.imageUrls}}" />
+
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-card>
+    </div>
+  </ion-col>
+  </div>
+</ion-content>
